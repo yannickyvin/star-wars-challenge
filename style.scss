@@ -1,0 +1,219 @@
+@import "scss/reset.scss";
+
+:root {
+  --width-content-left: 422px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #fff38a;
+  background-color: #060447;
+}
+
+.container {
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 3em 1em;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 3em;
+}
+
+.content-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 520px;
+
+  .logos {
+    position: relative;
+    margin-bottom: 2em;
+    height: 80px;
+
+    .logo {
+      width: 80px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  h1 {
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 0.3em;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+
+  .summaries {
+    position: relative;
+    height: 200px;
+    line-height: 30px;
+    overflow: hidden;
+
+    .summary {
+      position: absolute;
+      width: 422px;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .titles {
+    display: block;
+    position: relative;
+    height: 50px;
+    width: 100%;
+    .title {
+      z-index: 50;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .date {
+    font-size: 168px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    height: 200px;
+    padding-top: 25px;
+
+    & > span {
+      display: inline-block;
+      height: 100%;
+    }
+
+    .decades {
+      position: relative;
+      width: 100px;
+
+      .decade {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .years {
+      position: relative;
+      width: 100px;
+
+      .year {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
+
+.posters {
+  position: relative;
+  height: 604px;
+  width: 422px;
+  flex-basis: 422px;
+  flex-shrink: 0;
+
+  .poster {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+.logo,
+.summary,
+.title,
+.poster,
+.decade,
+.year {
+  transform: translate3d(10%, 0, 0);
+  transition: opacity 0.4s, transform 0.4s ease;
+  opacity: 0;
+
+  &.active {
+    transform: translate3d(0%, 0, 0);
+    opacity: 1;
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 20%;
+  margin-top: 90px;
+}
+
+.arrows {
+  display: flex;
+  align-items: center;
+  gap: 4em;
+
+  width: 120px;
+
+  .arrow {
+    width: 35px;
+    height: 22.25px;
+  }
+}
+
+.bullets {
+  width: calc(100% - 120px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .bullet {
+    width: 36px;
+    height: 36px;
+    background-color: #827b68;
+    border-radius: 100%;
+    flex-shrink: 0;
+    position: relative;
+
+    &.active {
+      background-color: #fff28a;
+    }
+  }
+
+  .separator {
+    width: 100%;
+    height: 1px;
+    position: relative;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #827b68;
+    }
+
+    &:after {
+      background-color: #fff28a;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.2s ease-out;
+    }
+
+    &.active {
+      &:after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}

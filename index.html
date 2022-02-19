@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+    </style>
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="container" id="app">
+      <div class="content">
+        <div class="content-left">
+          <div class="up">
+            <div class="logos">
+              <img class="logo movie-1 active" src="Vector1.svg" alt="" srcset="" />
+              <img class="logo movie-2" src="Vector2.svg" alt="" srcset="" />
+              <img class="logo movie-3" src="Vector3.svg" alt="" srcset="" />
+            </div>
+            <div class="description">
+              <div class="titles">
+                <h1 class="title movie-1 active">Un nouvel espoir</h1>
+                <h1 class="title movie-2">L'empire contre-attaque</h1>
+                <h1 class="title movie-3">Le retour du Jedi</h1>
+              </div>
+              <div class="summaries">
+                <p class="summary active movie-1">
+                  C'est le premier opus de la saga Star Wars par sa date de sortie, mais le
+                  quatrième selon l'ordre chronologique de l'histoire.
+                </p>
+                <p class="summary movie-2">
+                  La guerre entre le maléfique Empire galactique et son antagoniste, l’Alliance
+                  rebelle, bat son plein.
+                </p>
+                <p class="summary movie-3">
+                  Le maléfique Empire galactique construit une nouvelle station spatiale Étoile de
+                  la mort pour anéantir définitivement l'Alliance rebelle.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="date">
+            <span>19</span>
+            <span class="decades">
+              <span class="decade movie-1 active">7</span>
+              <span class="decade movie-2 movie-3">8</span>
+            </span>
+            <span class="years">
+              <span class="year movie-1 active">7</span>
+              <span class="year movie-2">0</span>
+              <span class="year movie-3">3</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="posters">
+          <img class="poster movie-1 active" src="poster1.png" alt="" srcset="" />
+          <img class="poster movie-2" src="poster2.png" alt="" srcset="" />
+          <img class="poster movie-3" src="poster3.png" alt="" srcset="" />
+        </div>
+      </div>
+
+      <nav class="navigation">
+        <div class="arrows">
+          <div class="arrow left-arrow"><img src="left-arrow.svg" alt="" srcset="" /></div>
+          <div class="arrow right-arrow"><img src="right-arrow.svg" alt="" srcset="" /></div>
+        </div>
+
+        <ul class="bullets">
+          <li class="bullet active movie-1 movie-2 movie-3"></li>
+          <li class="separator movie-2 movie-3"></li>
+          <li class="bullet movie-2 movie-3"></li>
+          <li class="separator movie-3"></li>
+          <li class="bullet movie-3"></li>
+          <li class="separator movie-4"></li>
+          <li class="bullet movie-4"></li>
+          <li class="separator movie-5"></li>
+          <li class="bullet movie-5"></li>
+        </ul>
+      </nav>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
